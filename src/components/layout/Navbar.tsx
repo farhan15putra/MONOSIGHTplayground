@@ -2,6 +2,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { cn } from '../../lib/utils';
 import { FlaskConical, LayoutGrid } from 'lucide-react';
+import emblem from '../../assets/emblem.png';
 
 export default function Navbar() {
   const location = useLocation();
@@ -14,11 +15,14 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 w-full z-50 px-6 py-4 pointer-events-none">
       <div className="max-w-7xl mx-auto flex items-center justify-between pointer-events-auto">
-        <Link to="/" className="text-xl font-bold tracking-tighter text-foreground flex items-center gap-2">
-          <div className="w-6 h-6 rounded-full bg-foreground flex items-center justify-center overflow-hidden">
-            <div className="w-2 h-2 bg-background rounded-full animate-pulse" />
-          </div>
-          MONOSIGHT<span className="text-muted-foreground font-light text-sm ml-1 uppercase">Playground</span>
+        <Link to="/" className="flex items-center gap-3 group">
+          <img 
+            src={emblem} 
+            alt="Monosight Emblem" 
+            className="h-10 md:h-12 w-auto object-contain brightness-0 invert transition-transform duration-500 group-hover:rotate-[15deg] group-hover:scale-110" 
+          />
+          <div className="h-4 w-[1px] bg-white/20 mx-1 hidden md:block" />
+          <span className="text-white/40 font-light text-[10px] uppercase tracking-[0.3em] hidden md:block">Playground</span>
         </Link>
         
         <nav className="flex items-center gap-2 glass px-4 py-2 rounded-full shadow-2xl shadow-black/20">
