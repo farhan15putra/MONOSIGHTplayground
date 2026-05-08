@@ -21,6 +21,8 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
+        itim: ['Itim', 'cursive'],
+        syne: ['Syne', 'sans-serif'],
       },
     },
   },
