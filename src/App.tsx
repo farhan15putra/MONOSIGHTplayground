@@ -7,22 +7,14 @@ import Playground from './pages/Playground';
 
 // ─── Page Transition Variants ───────────────────────────────────────────────
 const pageVariants = {
-  initial: {
-    opacity: 0,
-  },
+  initial: { opacity: 0 },
   animate: {
     opacity: 1,
-    transition: {
-      duration: 0.6,
-      ease: 'easeOut',
-    },
+    transition: { duration: 0.6, ease: 'easeOut' as const },
   },
   exit: {
     opacity: 0,
-    transition: {
-      duration: 0.15,
-      ease: 'easeIn',
-    },
+    transition: { duration: 0.15, ease: 'easeIn' as const },
   },
 };
 
