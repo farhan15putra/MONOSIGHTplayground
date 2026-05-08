@@ -5,12 +5,12 @@ import { ArrowRight } from 'lucide-react';
 import emblemSrc from '../assets/emblem.png';
 
 // ─── Physics Constants ──────────────────────────────────────────────────────
-const SPRING = 0.025      // Lebih kecil = partikel lebih "berat"/lambat balik
+const SPRING = 0.03      // Lebih kecil = partikel lebih "berat"/lambat balik
 const DAMPING = 0.5     // Lebih kecil = partikel lebih "goyang" sebelum settle
 const MOUSE_RADIUS = 90   // Radius jangkauan repulsi kursor (px)
 const MOUSE_FORCE = 7     // Seberapa kencang partikel "lari" dari kursor
 const SAMPLE_GAP = 3      // Jarak antar partikel (lebih kecil = lebih padat)
-const PARTICLE_SIZE = 2 // Ukuran tiap titik partikel
+const PARTICLE_SIZE = 1.5 // Ukuran tiap titik partikel
 
 const TAGS = [
   'Cylindrical Gallery', 'GLSL Shaders', 'Brush Reveal', 'Lens Distortion',
