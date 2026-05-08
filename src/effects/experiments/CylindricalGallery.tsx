@@ -220,7 +220,7 @@ function ImageMesh({ item, index, total, scrollRef, totalWidth }: ImageMeshProps
       <cylindricalMaterial
         ref={matRef}
         key={CylindricalMaterial.name}
-        uniforms-uTextureSize-value={[texture.image?.width ?? 600, texture.image?.height ?? 900]}
+        uniforms-uTextureSize-value={[(texture.image as any)?.width ?? 600, (texture.image as any)?.height ?? 900]}
         uniforms-uPlaneSize-value={[PLANE_W, PLANE_H]}
         uniforms-uCurvature-value={1}
         uniforms-uStrength-value={1.6}
