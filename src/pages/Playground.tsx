@@ -1,13 +1,13 @@
 import { useParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '../lib/utils';
-import { Box, Sparkles, Layers, Paintbrush } from 'lucide-react';
+import { Box, Sparkles, Layers, Paintbrush, Grid3X3 } from 'lucide-react';
 
 // Example experiments
 import BrushRevealEffect from '../effects/experiments/BrushRevealEffect';
 import BackwardHoverEffect from '../effects/experiments/BackwardHoverEffect';
 import CylindricalGallery from '../effects/experiments/CylindricalGallery';
-import FigRootShader from '../effects/experiments/FigRootShader';
+import FigRoots from '../effects/experiments/figroot';
 
 const EXPERIMENTS = [
   {
@@ -33,10 +33,17 @@ const EXPERIMENTS = [
   },
   {
     id: 'glsl-shaders',
-    name: 'Fluid Color Spectrum',
-    description: 'Dynamic liquid gradient shader using the FigRoots color palette and Perlin-inspired noise logic.',
+    name: 'GLSL Shaders',
+    description: 'Custom fragment shaders for image distortions.',
     icon: <Sparkles className="w-5 h-5" />,
-    component: FigRootShader
+    component: () => <div className="p-8 text-center text-muted-foreground">Shader Effect Placeholder</div>
+  },
+  {
+    id: 'figroots',
+    name: 'FigRoots Identity',
+    description: 'A structured color branding board with smooth motion reveals.',
+    icon: <Grid3X3 className="w-5 h-5" />,
+    component: FigRoots
   }
 ];
 
